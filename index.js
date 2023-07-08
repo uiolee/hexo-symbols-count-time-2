@@ -1,11 +1,10 @@
-/* global hexo */
-
+/* eslint-disable no-undef */
 'use strict';
 
-const helper = require('./lib/helper');
 const { stripHTML } = require('hexo-util');
+const helper = require('./lib/helper');
 
-var config = hexo.config.symbols_count_time = Object.assign({
+const config = Object.assign({
   symbols: true,
   time: true,
   total_symbols: true,
@@ -13,7 +12,7 @@ var config = hexo.config.symbols_count_time = Object.assign({
   exclude_codeblock: false,
   awl: 4,
   wpm: 275,
-  suffix: "mins."
+  suffix: 'mins.'
 }, hexo.config.symbols_count_time);
 
 helper.setConfig(config);

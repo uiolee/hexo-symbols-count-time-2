@@ -1,0 +1,85 @@
+name: Tester
+
+on:
+  push:
+    branches: ['main']
+    paths:
+      - '**.js?'
+      - '**.ts?'
+      - 'lib/**'
+      - 'test/**'
+      - 'package*.json'
+      - '.github/workflows/tester.yml'
+  pull_request:
+    paths:
+      - '**.js?'
+      - '**.ts?'
+      - 'lib/**'
+      - 'test/**'
+      - 'package*.json'
+      - '.github/workflows/tester.yml'
+
+jobs:
+  tester:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "lts/*"
+
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ~/.npm
+            node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          restore-keys: ${{ runner.os }}-node-
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Test
+        run: npm run test
+
+        env:
+          CI: true
+
+  coverage:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "lts/*"
+
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ~/.npm
+            node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          restore-keys: ${{ runner.os }}-node-
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Coverage
+        run: npm run test-cov
+        env:
+          CI: true
+
+      - uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.github_token }}
