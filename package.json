@@ -2,8 +2,7 @@
   "name": "hexo-symbols-count-time-2",
   "description": "Symbols count and time to read for articles.",
   "main": "index",
-  "version": "0.9.9",
-
+  "version": "1.0.0",
   "scripts": {
     "test": "mocha test",
     "test-cov": "nyc --reporter=lcov mocha test",
