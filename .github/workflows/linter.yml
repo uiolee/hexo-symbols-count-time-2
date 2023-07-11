@@ -2,20 +2,20 @@ name: Linter
 
 on:
   push:
-    branches: ['main']
+    branches: ["main"]
     paths:
-      - '**.js?'
-      - '**.ts?'
-      - 'lib/**'
-      - 'test/**'
-      - '.github/workflows/linter.yml'
+      - "**.js?"
+      - "**.ts?"
+      - "lib/**"
+      - "test/**"
+      - ".github/workflows/linter.yml"
   pull_request:
     paths:
-      - '**.js?'
-      - '**.ts?'
-      - 'lib/**'
-      - 'test/**'
-      - '.github/workflows/linter.yml'
+      - "**.js?"
+      - "**.ts?"
+      - "lib/**"
+      - "test/**"
+      - ".github/workflows/linter.yml"
 
 jobs:
   linter:

@@ -2,22 +2,22 @@ name: Tester
 
 on:
   push:
-    branches: ['main']
+    branches: ["main"]
     paths:
-      - '**.js?'
-      - '**.ts?'
-      - 'lib/**'
-      - 'test/**'
-      - 'package*.json'
-      - '.github/workflows/tester.yml'
+      - "**.js?"
+      - "**.ts?"
+      - "lib/**"
+      - "test/**"
+      - "package*.json"
+      - ".github/workflows/tester.yml"
   pull_request:
     paths:
-      - '**.js?'
-      - '**.ts?'
-      - 'lib/**'
-      - 'test/**'
-      - 'package*.json'
-      - '.github/workflows/tester.yml'
+      - "**.js?"
+      - "**.ts?"
+      - "lib/**"
+      - "test/**"
+      - "package*.json"
+      - ".github/workflows/tester.yml"
 
 jobs:
   tester:
