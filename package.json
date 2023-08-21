@@ -1,39 +1,40 @@
 {
   "name": "hexo-symbols-count-time-2",
-  "description": "Symbols count and time to read for articles.",
-  "main": "index",
   "version": "1.0.0",
-  "scripts": {
-    "test": "mocha test",
-    "test-cov": "nyc --reporter=lcov mocha test",
-    "lint": "npx eslint .",
-    "lint:fix": "npx eslint . --fix"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/uiolee/hexo-symbols-count-time-2.git"
-  },
+  "description": "Symbols count and time to read for articles.",
   "keywords": [
     "hexo",
     "count",
     "symbols",
     "time-to-read"
   ],
-  "author": "Ivan.Nginx <ivan.nginx@gmail.com> (https://almostover.ru)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uiolee/hexo-symbols-count-time-2.git"
+  },
   "license": "LGPL-3.0",
-  "dependencies": {
-    "hexo-util": "^3.0.1"
-  },
-  "devDependencies": {
-    "chai": "^4.3.7",
-    "eslint": "^8.44.0",
-    "eslint-config-hexo": "^5.0.0",
-    "hexo": "^7.0.0-rc1",
-    "mocha": "^10.2.0",
-    "nyc": "^15.1.0"
-  },
+  "author": "Ivan.Nginx <ivan.nginx@gmail.com> (https://almostover.ru)",
+  "main": "index",
   "files": [
     "lib",
     "index.js"
-  ]
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "mocha test",
+    "test-cov": "c8 --reporter=lcov pnpm run test"
+  },
+  "peerDependencies": {
+    "hexo-util": "^3.0.0"
+  },
+  "devDependencies": {
+    "c8": "^8.0.1",
+    "chai": "^4.3.7",
+    "eslint": "^8.47.0",
+    "eslint-config-hexo": "^5.0.0",
+    "hexo": "7.0.0-rc2",
+    "mocha": "^10.2.0"
+  },
+  "packageManager": "pnpm@8"
 }

@@ -1,8 +1,8 @@
 # hexo-symbols-count-time-2
 
+> This a fork of [hexo-symbols-count-time](https://github.com/theme-next/hexo-symbols-count-time)
+
 [![npm-image]][npm-url]
-[![node-image]][node-url]
-[![hexo-image]][hexo-url]
 [![cover-image]][cover-url]
 [![lic-image]](LICENSE)
 [![Tester](https://github.com/uiolee/hexo-symbols-count-time-2/actions/workflows/tester.yml/badge.svg?branch=main&event=push)](https://github.com/uiolee/hexo-symbols-count-time-2/actions/workflows/tester.yml)
@@ -17,8 +17,14 @@ Better than [`hexo-reading-time`](https://github.com/ierhyna/hexo-reading-time) 
 [![dm-image]][npm-url]
 [![dt-image]][npm-url]
 
-```bash
-npm install hexo-symbols-count-time-2
+```sh
+npm i hexo-symbols-count-time-2
+```
+
+or
+
+```sh
+pnpm add hexo-symbols-count-time-2
 ```
 
 ## Usage
@@ -41,17 +47,17 @@ If `symbols_count_time` option is not specified, the default parameters will be 
 
 ### Parameters
 
-* `awl` – Average Word Length (chars count in word). Default: `4`. You can check this [here](https://charactercounttool.com).
-  * CN &asymp; `2`
-  * EN &asymp; `5`
-  * RU &asymp; `6`
-* `wpm` – Words Per Minute. Default: `275`. You can check this [here](https://wordcounter.net).
-  * Slow &asymp; `200`
-  * Normal &asymp; `275`
-  * Fast &asymp; `350`
-* `suffix` – If time to read less then 60 minutes, added suffix as string parameter.\
+- `awl` – Average Word Length (chars count in word). Default: `4`. You can check this [here](https://charactercounttool.com).
+  - CN &asymp; `2`
+  - EN &asymp; `5`
+  - RU &asymp; `6`
+- `wpm` – Words Per Minute. Default: `275`. You can check this [here](https://wordcounter.net).
+  - Slow &asymp; `200`
+  - Normal &asymp; `275`
+  - Fast &asymp; `350`
+- `suffix` – If time to read less then 60 minutes, added suffix as string parameter.\
   If not defined, `mins.` will be used as default.
-* `exclude_codeblock` – Allow to exclude all content inside code blocks for more accurate words counting.\
+- `exclude_codeblock` – Allow to exclude all content inside code blocks for more accurate words counting.\
   If not defined, `false` will be used as default.
 
 **Note for Chinese users:** because in Chinese language average word length about `~1.5` and if you at most cases write posts in Chinese (without mixed English), recommended to set `awl` to `2` and `wpm` to `300`.\
@@ -72,22 +78,21 @@ symbols_count_time:
 
 ```bash
 cd hexo
-git clone https://github.com/uiolee/hexo-symbols-count-time-2.git node_modules/hexo-symbols-count-time
-cd node_modules/hexo-symbols-count-time-2
+git clone https://github.com/uiolee/hexo-symbols-count-time-2.git
+cd hexo-symbols-count-time-2
+pnpm i
 ```
 
 ### Tests
 
 ```bash
-npm install mocha chai --save-dev
-npm test
+pnpm run test
 ```
 
 ### Tests with coverage
 
 ```bash
-npm install -g nyc
-nyc --print both node_modules/.bin/_mocha -- test/index.js
+pnpm run test-cov
 ```
 
 ### Templates
@@ -95,37 +100,61 @@ nyc --print both node_modules/.bin/_mocha -- test/index.js
 #### Symbols Count
 
 ```js
-{{ symbolsCount(post) }}
+{
+  {
+    symbolsCount(post);
+  }
+}
 ```
 
 #### Symbols Time
 
 ```js
-{{ symbolsTime(post) }}
+{
+  {
+    symbolsTime(post);
+  }
+}
 ```
 
 Or with predefined parameters:
 
 ```js
-{{ symbolsTime(post, awl, wpm, suffix) }}
+{
+  {
+    symbolsTime(post, awl, wpm, suffix);
+  }
+}
 ```
 
 #### Symbols Count Total
 
 ```js
-{{ symbolsCountTotal(site) }}
+{
+  {
+    symbolsCountTotal(site);
+  }
+}
 ```
 
 #### Symbols Time Total
 
 ```js
-{{ symbolsTimeTotal(site) }}
+{
+  {
+    symbolsTimeTotal(site);
+  }
+}
 ```
 
 Or with predefined parameters:
 
 ```js
-{{ symbolsTimeTotal(site, awl, wpm, suffix) }}
+{
+  {
+    symbolsTimeTotal(site, awl, wpm, suffix);
+  }
+}
 ```
 
 #### Renderers syntax
@@ -139,11 +168,9 @@ Jade: `span=` `template`
 [node-image]: https://img.shields.io/node/v/hexo-symbols-count-time-2?style=flat-square
 [cover-image]: https://img.shields.io/coveralls/uiolee/hexo-symbols-count-time-2/main?style=flat-square
 [lic-image]: https://img.shields.io/npm/l/hexo-symbols-count-time-2?style=flat-square
-
 [size-image]: https://img.shields.io/github/languages/code-size/uiolee/hexo-symbols-count-time-2?style=flat-square
 [dm-image]: https://img.shields.io/npm/dm/hexo-symbols-count-time-2?style=flat-square
 [dt-image]: https://img.shields.io/npm/dt/hexo-symbols-count-time-2?style=flat-square
-
 [npm-url]: https://www.npmjs.com/package/hexo-symbols-count-time-2
 [node-url]: https://nodejs.org/en/download/releases
 [hexo-url]: https://hexo.io
