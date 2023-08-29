@@ -1,4 +1,4 @@
-name: Tester
+name: test
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
       - "lib/**"
       - "test/**"
       - "package.json"
-      - ".github/workflows/tester.yml"
+      - ".github/workflows/test.yml"
   pull_request:
     paths:
       - "**.js?"
@@ -17,13 +17,13 @@ on:
       - "lib/**"
       - "test/**"
       - "package.json"
-      - ".github/workflows/tester.yml"
+      - ".github/workflows/test.yml"
 
 env:
   CI: true
 
 jobs:
-  tester:
+  test:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
