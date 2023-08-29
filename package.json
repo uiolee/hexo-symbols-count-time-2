@@ -22,8 +22,9 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "mocha test",
-    "test-cov": "c8 --reporter=lcov pnpm run test"
+    "test": "jest",
+    "test:cov": "jest --coverage --coverageReporters=html text",
+    "test:lcov": "jest --coverage --coverageReporters=lcovonly text"
   },
   "devDependencies": {
     "eslint": "^8.48.0",

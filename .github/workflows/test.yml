@@ -94,7 +94,7 @@ jobs:
         run: pnpm i
 
       - name: Coverage
-        run: pnpm run test-cov
+        run: pnpm run test:lcov
 
       - uses: coverallsapp/github-action@v2
         with:
