@@ -2,10 +2,9 @@
 
 > This a fork of [hexo-symbols-count-time](https://github.com/theme-next/hexo-symbols-count-time)
 
-[![npm-image]][npm-url]
-[![cover-image]][cover-url]
 [![lic-image]](LICENSE)
-[![Tester](https://github.com/uiolee/hexo-symbols-count-time-2/actions/workflows/tester.yml/badge.svg?branch=main&event=push)](https://github.com/uiolee/hexo-symbols-count-time-2/actions/workflows/tester.yml)
+[![Coverage Status](https://coveralls.io/repos/github/uiolee/hexo-symbols-count-time-2/badge.svg?branch=main)](https://coveralls.io/github/uiolee/hexo-symbols-count-time-2?branch=main)
+[![test](https://github.com/uiolee/hexo-symbols-count-time-2/actions/workflows/test.yml/badge.svg?branch=main&event=push)](https://github.com/uiolee/hexo-symbols-count-time-2/actions/workflows/test.yml)
 
 Symbols count and time to read for articles in Hexo blog.
 
@@ -13,6 +12,7 @@ Better than [`hexo-reading-time`](https://github.com/ierhyna/hexo-reading-time) 
 
 ## Installation
 
+[![npm-image]][npm-url]
 [![size-image]][npm-url]
 [![dm-image]][npm-url]
 [![dt-image]][npm-url]
