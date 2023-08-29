@@ -26,12 +26,12 @@
     "test-cov": "c8 --reporter=lcov pnpm run test"
   },
   "devDependencies": {
-    "c8": "^8.0.1",
-    "chai": "^4.3.7",
-    "eslint": "^8.47.0",
-    "eslint-config-hexo": "^5.0.0",
-    "hexo": "7.0.0-rc2",
-    "mocha": "^10.2.0"
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-jest": "^27.2.3",
+    "eslint-plugin-prettier": "^5.0.0",
+    "jest": "^29.6.4",
+    "prettier": "^3.0.2"
   },
   "peerDependencies": {
     "hexo-util": "^3.0||^2.7||>=1.9.1"
