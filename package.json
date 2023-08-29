@@ -25,9 +25,6 @@
     "test": "mocha test",
     "test-cov": "c8 --reporter=lcov pnpm run test"
   },
-  "peerDependencies": {
-    "hexo-util": "^3.0.0"
-  },
   "devDependencies": {
     "c8": "^8.0.1",
     "chai": "^4.3.7",
@@ -35,6 +32,14 @@
     "eslint-config-hexo": "^5.0.0",
     "hexo": "7.0.0-rc2",
     "mocha": "^10.2.0"
+  },
+  "peerDependencies": {
+    "hexo-util": "^3.0||^2.7||>=1.9.1"
+  },
+  "peerDependenciesMeta": {
+    "hexo-util": {
+      "optional": false
+    }
   },
   "packageManager": "pnpm@8"
 }
