@@ -1,21 +1,27 @@
-# hexo-symbols-count-time-2
+# [hexo-symbols-count-time-2](https://github.com/uiolee/hexo-symbols-count-time-2)
+
+[![GitHub Tag](https://img.shields.io/github/v/tag/uiolee/hexo-symbols-count-time-2?logo=github)](https://github.com/uiolee/hexo-symbols-count-time-2/tags)
+[![GitHub Release](https://img.shields.io/github/v/release/uiolee/hexo-symbols-count-time-2?logo=github)](https://github.com/uiolee/hexo-symbols-count-time-2/releases)
+[![GitHub commits since latest release](https://img.shields.io/github/commits-since/uiolee/hexo-symbols-count-time-2/latest?include_prereleases&sort=semver&logo=github)](https://github.com/uiolee/hexo-symbols-count-time-2/compare/...main)
+[![GitHub top language](https://img.shields.io/github/languages/top/uiolee/hexo-symbols-count-time-2?logo=github)](#hexo-symbols-count-time-2)
+[![Coverage Status](https://coveralls.io/repos/github/uiolee/hexo-symbols-count-time-2/badge.svg?branch=main)](https://coveralls.io/github/uiolee/hexo-symbols-count-time-2?branch=main)
+[![CI](https://github.com/uiolee/hexo-symbols-count-time-2/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/uiolee/hexo-symbols-count-time-2/actions/workflows/ci.yml)
+[![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/uiolee/hexo-symbols-count-time-2?logo=librariesdotio)](https://libraries.io/github/uiolee/hexo-symbols-count-time-2#dependencies)
 
 > This a fork of [hexo-symbols-count-time](https://github.com/theme-next/hexo-symbols-count-time)
 
-[![lic-image]](LICENSE)
-[![Coverage Status](https://coveralls.io/repos/github/uiolee/hexo-symbols-count-time-2/badge.svg?branch=main)](https://coveralls.io/github/uiolee/hexo-symbols-count-time-2?branch=main)
-[![test](https://github.com/uiolee/hexo-symbols-count-time-2/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/uiolee/hexo-symbols-count-time-2/actions/workflows/ci.yml)
-
-Symbols count and time to read for articles in Hexo blog.
+Symbols count and time to read for articles in [Hexo](https://github.com/hexojs/hexo) blog.
 
 Better than [`hexo-reading-time`](https://github.com/ierhyna/hexo-reading-time) and faster than [`hexo-wordcount`](https://github.com/willin/hexo-wordcount). No external dependencies.
 
 ## Installation
 
-[![npm-image]][npm-url]
-[![size-image]][npm-url]
-[![dm-image]][npm-url]
-[![dt-image]][npm-url]
+[![NPM Version](https://img.shields.io/npm/v/hexo-symbols-count-time-2?logo=npm)](https://www.npmjs.com/package/hexo-symbols-count-time-2)
+[![node-lts](https://img.shields.io/node/v-lts/hexo-symbols-count-time-2?logo=nodedotjs)](https://nodejs.org/)
+[![NPM License](https://img.shields.io/npm/l/hexo-symbols-count-time-2)](./LICENSE)
+[![NPM Downloads](https://img.shields.io/npm/dm/hexo-symbols-count-time-2?logo=npm)](#hexo-symbols-count-time-2)
+[![NPM Downloads](https://img.shields.io/npm/dt/hexo-symbols-count-time-2?logo=npm)](#hexo-symbols-count-time-2)
+[![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/hexo-symbols-count-time-2?logo=librariesdotio)](https://libraries.io/npm/hexo-symbols-count-time-2/tree)
 
 ```sh
 pnpm add hexo-symbols-count-time-2
@@ -27,7 +33,7 @@ or
 npm i hexo-symbols-count-time-2
 ```
 
-## Usage
+## Configuration
 
 You can set options of hexo-symbols-count-time-2 in the **Hexo's `_config.yml`** (which locates in the root dir of your blog):
 
@@ -45,7 +51,7 @@ symbols_count_time:
 
 If `symbols_count_time` option is not specified, the default parameters will be used.
 
-### Parameters
+## Parameters
 
 - `awl` – Average Word Length (chars count in word). Default: `4`. You can check this [here](https://charactercounttool.com).
   - CN &asymp; `2`
@@ -63,7 +69,7 @@ If `symbols_count_time` option is not specified, the default parameters will be 
 **Note for Chinese users:** because in Chinese language average word length about `~1.5` and if you at most cases write posts in Chinese (without mixed English), recommended to set `awl` to `2` and `wpm` to `300`.\
 But if you usualy mix your posts with English, `awl` to `4` and `wpm` to `275` will be nice.
 
-### NexT theme
+## NexT theme
 
 This plugin integrated in «NexT» and after plugin enabled in main Hexo config, you may adjust options in NexT config:
 
@@ -74,9 +80,9 @@ symbols_count_time:
   item_text_total: false
 ```
 
-### Templates
+## Templates
 
-#### Symbols Count
+### Symbols Count
 
 ```js
 {
@@ -86,7 +92,7 @@ symbols_count_time:
 }
 ```
 
-#### Symbols Time
+### Symbols Time
 
 ```js
 {
@@ -106,7 +112,7 @@ Or with predefined parameters:
 }
 ```
 
-#### Symbols Count Total
+### Symbols Count Total
 
 ```js
 {
@@ -116,7 +122,7 @@ Or with predefined parameters:
 }
 ```
 
-#### Symbols Time Total
+### Symbols Time Total
 
 ```js
 {
@@ -136,21 +142,8 @@ Or with predefined parameters:
 }
 ```
 
-#### Renderers syntax
+### Renderers syntax
 
 SWIG / Nunjucks: `{{` `template` `}}`\
 EJS: `<%-` `template` `%>`\
 Jade: `span=` `template`
-
-[npm-image]: https://img.shields.io/npm/v/hexo-symbols-count-time-2?style=flat-square
-[hexo-image]: https://img.shields.io/badge/hexo-%3E%3D%206.0-blue?style=flat-square
-[node-image]: https://img.shields.io/node/v/hexo-symbols-count-time-2?style=flat-square
-[cover-image]: https://img.shields.io/coveralls/uiolee/hexo-symbols-count-time-2/main?style=flat-square
-[lic-image]: https://img.shields.io/npm/l/hexo-symbols-count-time-2?style=flat-square
-[size-image]: https://img.shields.io/github/languages/code-size/uiolee/hexo-symbols-count-time-2?style=flat-square
-[dm-image]: https://img.shields.io/npm/dm/hexo-symbols-count-time-2?style=flat-square
-[dt-image]: https://img.shields.io/npm/dt/hexo-symbols-count-time-2?style=flat-square
-[npm-url]: https://www.npmjs.com/package/hexo-symbols-count-time-2
-[node-url]: https://nodejs.org/en/download/releases
-[hexo-url]: https://hexo.io
-[cover-url]: https://coveralls.io/github/uiolee/hexo-symbols-count-time-2?branch=main "Coverage of Tests"
