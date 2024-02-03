@@ -4,6 +4,7 @@ on:
   pull_request_target:
     paths:
       - "package*.json"
+      - "pnpm-lock.yaml"
 
 permissions:
   pull-requests: write

@@ -22,6 +22,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "sort": "pnpm dlx sort-package-json",
     "test": "jest",
     "test:cov": "jest --coverage --coverageReporters=html text",
     "test:lcov": "jest --coverage --coverageReporters=lcovonly text"
@@ -42,5 +43,5 @@
       "optional": false
     }
   },
-  "packageManager": "pnpm@8"
+  "packageManager": "pnpm@8.15.1+sha256.245fe901f8e7fa8782d7f17d32b6a83995e2ae03984cb5b62b8949bfdc27c7b5"
 }
