@@ -4,7 +4,7 @@
 
 [![lic-image]](LICENSE)
 [![Coverage Status](https://coveralls.io/repos/github/uiolee/hexo-symbols-count-time-2/badge.svg?branch=main)](https://coveralls.io/github/uiolee/hexo-symbols-count-time-2?branch=main)
-[![test](https://github.com/uiolee/hexo-symbols-count-time-2/actions/workflows/test.yml/badge.svg?branch=main&event=push)](https://github.com/uiolee/hexo-symbols-count-time-2/actions/workflows/test.yml)
+[![test](https://github.com/uiolee/hexo-symbols-count-time-2/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/uiolee/hexo-symbols-count-time-2/actions/workflows/ci.yml)
 
 Symbols count and time to read for articles in Hexo blog.
 
@@ -18,13 +18,13 @@ Better than [`hexo-reading-time`](https://github.com/ierhyna/hexo-reading-time) 
 [![dt-image]][npm-url]
 
 ```sh
-npm i hexo-symbols-count-time-2
+pnpm add hexo-symbols-count-time-2
 ```
 
 or
 
 ```sh
-pnpm add hexo-symbols-count-time-2
+npm i hexo-symbols-count-time-2
 ```
 
 ## Usage
@@ -72,27 +72,6 @@ symbols_count_time:
   separated_meta: true
   item_text_post: true
   item_text_total: false
-```
-
-## Development
-
-```bash
-cd hexo
-git clone https://github.com/uiolee/hexo-symbols-count-time-2.git
-cd hexo-symbols-count-time-2
-pnpm i
-```
-
-### Tests
-
-```bash
-pnpm run test
-```
-
-### Tests with coverage
-
-```bash
-pnpm run test-cov
 ```
 
 ### Templates
