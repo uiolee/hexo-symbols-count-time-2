@@ -96,7 +96,8 @@ jobs:
       - name: Coverage
         run: pnpm run test:lcov
 
-      - uses: coverallsapp/github-action@v2
+      - name: Coveralls
+        uses: coverallsapp/github-action@v2
         with:
           github-token: ${{ secrets.github_token }}
 
